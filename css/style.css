@@ -1,0 +1,99 @@
+@import url('common.css');
+@import url('bootstrap.css');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300&display=swap');
+
+
+/* font-family: 'Roboto', sans-serif; */
+
+
+header{
+    width: 100%;
+    box-shadow: 5px 5px 30px #000;
+    position: fixed;
+    z-index: 100;
+}
+header h1{
+height: 125px;
+background: #fff url(../images/logo.png) no-repeat center;
+margin: 0;
+}
+header ul{}
+header ul li{
+    background: linear-gradient(180deg, #2e363a, #333b3f);
+    padding-right: 23px;
+    text-align: end;
+}
+header ul li:hover{
+    background: linear-gradient(180deg, #30bbb9, #1aa6a4);
+}
+header ul li a{
+    text-decoration: none;
+    text-decoration-line: none;
+    line-height: 62px;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+}
+
+
+section .row figure{
+position: relative;
+padding: 0;
+margin: 0;
+}
+section .row figure img{
+    width: 100%;
+}
+section .row figure .text{
+    width: 100%; height: 100%;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(46,185,183,0.9);
+    opacity: 0;
+    transition: opacity .5s;
+}
+section .row figure .text h2{
+    color: #fff;
+    font-size: 24px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+    position: absolute;
+    top: 25%; left: 50%;
+    transform: translate(-50%, -50%);
+}
+section .row figure .text p{
+    color: #fff;
+    position: absolute;
+    font-size: 12px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+    top: 40%; left: 50%;
+    transform: translate(-50%, -50%);
+}
+section .row figure .text span{
+    width: 107px;height: 1px;
+    background: #fff;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+}
+section .row figure .text a{
+    width: 60px; height: 60px;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    position: absolute;
+    top: 65%; left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+}
+section .row figure:hover .text{
+    opacity: 1;
+}
+
+section figure .text a svg path{
+    fill : #fff
+}

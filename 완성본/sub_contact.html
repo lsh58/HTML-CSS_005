@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link href="css/bootstrap.css" rel="stylesheet"> 
+    <link href="css/style.css" rel="stylesheet"> 
+    <link rel="shortcut icon" href="./img/fcon.ico" >
+    <!--favicon 확장자->ico-->
+</head>
+<body>
+
+ <div class="wrap">
+    <header >
+        <nav>
+            <h1><a href="#"><img src="img/logo.gif"></a></h1>
+            <ul>
+                <li><a href="index.html" >home</a></li>
+                <li><a href="#">Work</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="sub_contact.html" class="active">Contact</a></li>
+            </ul>
+            <dl>
+                <dt>Filter</dt>
+                <dd><a href="#">All work</a></dd>
+                <dd><a href="#">web design</a></dd>
+                <dd><a href="#">illustration</a></dd>
+                <dd><a href="#">photography</a></dd>
+                <dd><a href="#">wallpapers</a></dd>
+                <dd><a href="#">brochures</a></dd>
+            </dl>
+            <span>
+                <a href="#" title="sns01"></a>
+                <a href="#" title="sns02"></a>
+                <a href="#" title="sns03"></a>
+                <a href="#" title="sns04"></a>
+                <a href="#" title="sns05"></a>
+                <a href="#" title="sns06"></a>
+                <a href="#" title="sns07"></a>
+            </span>
+        </nav>
+        
+        <a class="menu-trigger " href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+    </header>    
+    <section>
+       
+        <!--카카오지도-->
+        <div id="map" style="width:100%;height:100vh;"></div>
+
+        <script type="text/javascript" src="http://dapi.kakao.com/v2/maps/sdk.js?appkey=8ecd8a3578d5b374b91ada84c4ed156b"></script>
+        <script>
+        var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+            mapOption = { 
+                center: new kakao.maps.LatLng(37.500046, 127.0273132), // 지도의 중심좌표
+                level: 3 // 지도의 확대 레벨
+            };
+
+        var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+        // 마커가 표시될 위치입니다 
+        var markerPosition  = new kakao.maps.LatLng(37.500046, 127.0270110); 
+
+        // 마커를 생성합니다
+        var marker = new kakao.maps.Marker({
+            position: markerPosition
+        });
+
+        // 마커가 지도 위에 표시되도록 설정합니다
+        marker.setMap(map);
+
+        // 아래 코드는 지도 위의 마커를 제거하는 코드입니다
+        // marker.setMap(null);    
+        </script>
+        
+    </section>
+    <aside>
+        <a><span></span></a>
+        <div>
+            <a href="#">9930 1234 5679</a>
+            <a href="#">contact@domain.com</a>
+            <a href="#">street address example</a>
+        </div>
+    </aside>
+ </div>
+    
+</body>
+
+</html>

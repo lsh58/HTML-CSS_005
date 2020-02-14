@@ -1,0 +1,293 @@
+@import url('common.css');
+
+.wrap{
+    overflow:hidden;
+}
+header{
+    background:#000;
+    box-shadow: 10px 0 10px rgba(0,0,0,0.6);
+    position:fixed !important;
+    z-index:2;
+    left:0; top:0;
+    width:16%;height:100%;    
+    padding:0 !important;    
+}
+header nav{
+    width:100%;
+}
+header nav h1{    
+    background:#fff;
+    padding:30px 0;
+    text-align:center;
+    margin:0;
+}
+header nav ul{}
+header nav ul li{text-align:right;}
+header nav ul li a{
+    width:100%;
+    padding:18px 30px;
+    
+background:linear-gradient(to bottom,#333b3f,#2e363a);
+                            /* 90deg */
+    
+    font-size:1.2em; color:#fff;
+    text-transform: uppercase;
+    font-weight:normal;
+}
+header nav ul li:hover a,
+header nav ul li a.active{    
+    background:linear-gradient(to bottom,#30bcba, #1aa5a3);
+    color:#fff;
+    text-decoration: none;
+}
+header nav dl{text-align:right; padding:20px 30px;}
+header nav dl dt{
+    color:#1ab5b3; font-size:1.2em; padding-right:30px;
+    margin:10px 0;
+    background:url('../img/ico_filter.png') right center no-repeat;
+}
+header nav dl dd{}
+header nav dl dd a{color:#777;}
+header nav dl dd a:hover{color:#fff;}
+header nav span{width:100%; padding:0 30px; text-align:right;}
+header nav span a{
+    width:24px; height:24px;
+    background:url('../img/ico.png') no-repeat;
+}
+header nav span a:nth-of-type(2){
+    background-position: -33px 0;
+}
+header nav span a:nth-of-type(3){
+    background-position: -67px 0;
+}
+header nav span a:nth-of-type(4){
+    background-position: -100px 0;
+}
+header nav span a:nth-of-type(5){
+    background-position: -133px 0;
+}
+header nav span a:nth-of-type(6){background-position: -167px 0;}
+header nav span a:nth-of-type(7){background-position: -201px 0;}
+
+/*contents*/
+section{width:84%; left:16%; position:relative; }
+
+.thum figure{padding:0;}
+.thum figure img{width:100%;}
+.thum figure figcaption{
+    position:absolute;
+    top:0; left:0;
+    width:100%; height:100%; 
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background:rgba(26,180,180,0.8);
+    opacity:0;
+    transition:opacity .3s;
+}
+.thum figure:hover figcaption{opacity:1;}
+.thum figure figcaption strong{
+    font-size:1.4em; color:#fff;
+    font-weight:normal;
+}
+.thum figure figcaption small{color:#fff;}
+.thum figure figcaption small:after{
+    content:'';
+    display:block;
+    border-bottom:1px solid #fff;
+    margin:15px auto 15px auto;
+}
+.thum figure figcaption i{
+    width:60px; height:60px;
+    border:1px solid #fff;
+    border-radius:100%;
+    background:url('../img/ico_arrow.png') center center no-repeat;
+}
+
+/*aside*/
+aside{
+    position:fixed;
+    right:0; top:0;
+    z-index:2;
+}
+aside > a{
+    width:90px; height:90px;
+    background:#21acab;
+    display:block;
+    cursor:pointer;
+}
+aside > a span{
+    width:80%; height:80%;
+    border:1px solid rgba(255,255,255,0.8);
+    border-radius: 100%;
+    position:relative;
+    left:10%; top:10%;
+     background:url('../img/ico_aside.png') center center no-repeat;
+}
+aside > a:hover + div{
+    display:block;
+}
+aside div{
+    background:rgba(0,0,0,0.6);
+    padding:20px;
+    position:absolute;
+    right:0; top:90px;
+    display:none;
+}
+aside div a{white-space: nowrap; color:#fff;}
+aside div a:before{
+    content:'';
+    background:url('../img/ico.png') 0 -36px no-repeat;
+    width:30px; height:30px;
+    display:inline-block;
+    vertical-align: middle;
+}
+aside div a:nth-of-type(2):before{
+    background-position: -35px -36px;
+}
+aside div a:nth-of-type(3):before{
+    background-position: -68px -36px;
+}
+
+/*버거메뉴*/
+.menu-trigger span {
+	display: inline-block;
+	transition: all .4s;
+	box-sizing: border-box;
+}
+
+.menu-trigger {
+	position: relative;
+	width: 50px;
+	height: 44px;
+    display:none;
+}
+
+.menu-trigger span {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 4px;
+	background-color: #fff;
+	border-radius: 4px;
+}
+
+.menu-trigger span:nth-of-type(1) {
+	top: 0;
+}
+
+.menu-trigger span:nth-of-type(2) {
+	top: 20px;
+}
+
+.menu-trigger span:nth-of-type(3) {
+	bottom: 0;
+}
+
+
+.menu-trigger.active-1 span:nth-of-type(1) {
+	-webkit-transform: translateY (20px) rotate (-45deg);
+	transform: translateY(20px) rotate(-45deg);
+}
+
+.menu-trigger.active-1 span:nth-of-type(2) {
+	opacity: 0;
+}
+
+.menu-trigger.active-1 span:nth-of-type(3) {
+	-webkit-transform: translateY(-20px) rotate(45deg);
+	transform: translateY(-20px) rotate(45deg);
+}
+
+
+/*
+=======================================================
+=========================MEDIA=========================
+=======================================================
+*/
+@media (max-width:992px){
+    header{ height:auto; width:100%;}
+    header ul{
+        display:flex;
+        justify-content: center;
+        background:linear-gradient(to bottom,#333b3f,#2e363a);
+        margin:0 !important;
+    }
+    header ul li a{font-size:2vw;}
+    header li{}
+    header dl,header span{display:none;}
+    section{width:100%; left:0;}
+    
+    .menu-trigger {
+        display:block;
+        position:absolute; 
+        right:5vw; top:5vw;
+        z-index:9;
+    }
+    .menu-trigger span{
+        background:#f00;
+    }
+    aside{ position:static; }
+    /*
+        버거메뉴 12가지
+        https://codepen.io/jaehee/pen/PzbVpG
+    */
+}
+
+
+
+@media (max-width:480px){
+    header{ height:auto; width:100%;}
+    header nav h1{
+        position:fixed;
+        width:100%;
+        
+    }
+    header.active ul,
+    header.active dl,
+    header.active span{
+        display:block;
+    }
+    
+    /*header ul,header dl,header span{
+        display:block;
+    }*/
+    
+    section{width:100%; left:0;}
+    
+    .menu-trigger {
+        display:block;
+        position:absolute; 
+        right:5vw; top:5vw;
+        z-index:9;
+    }
+    .menu-trigger span{
+        background:#f00;
+    }
+    aside{ position:static; }
+}
+
+/*IE10이상*/
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+     
+    header{position:absolute !important;}
+    
+}
+
+@media print{
+    section{display:none;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
